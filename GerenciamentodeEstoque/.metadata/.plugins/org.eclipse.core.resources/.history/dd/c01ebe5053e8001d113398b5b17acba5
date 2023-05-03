@@ -1,0 +1,79 @@
+package modelo;
+
+import java.util.ArrayList;
+
+public class Filial{
+
+    protected String nome;
+    protected Telefone NumTel;
+    protected Endereco endereco;
+    protected String CNPJ;
+    protected ArrayList<Produto> ProdutodeEstoques = new ArrayList<Produto>();
+    protected String tipo;
+
+
+
+    public Filial(String nome, Telefone NumTel, Endereco endereco, String CNPJ, String tipo){
+        this.nome = nome;
+        this.NumTel = NumTel;
+        this.endereco = endereco;
+        this.CNPJ = CNPJ;
+        this.tipo = tipo;
+    }
+
+    public ArrayList<Produto> getProdutodeEstoques(){
+        return ProdutodeEstoques;
+    }
+    
+    
+    public void setProdutodeEstoques(ArrayList<Produto> produtodeEstoques) {
+		ProdutodeEstoques = produtodeEstoques;
+	}
+    
+    public void adicionarProduto(Produto produto) {
+        ProdutodeEstoques.add(produto);
+    }
+    
+    public void removerProduto(int indice) {
+    	ProdutodeEstoques.remove(indice);
+    }
+
+
+	public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Telefone getTel() {
+        return NumTel;
+    }
+
+    public void setNumTel(Telefone numTel) {
+        this.NumTel = numTel;
+    }
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+	@Override
+	public String toString() {
+		return "Filial [nome=" + nome + ", NumTel=" + NumTel + ", endereco=" + endereco + ", CNPJ=" + CNPJ
+				+ ", ProdutodeEstoques=" + ProdutodeEstoques + ", tipo=" + tipo + "]";
+	}
+    
+
+}

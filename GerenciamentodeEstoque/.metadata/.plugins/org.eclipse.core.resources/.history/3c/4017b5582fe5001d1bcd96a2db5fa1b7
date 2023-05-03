@@ -1,0 +1,19 @@
+package modelo;
+
+public class Main {
+    public static void main(String[] args) {
+        Endereco e1 = new Endereco(75704380,201, "Quadra", "Rua 2","Bairro 1","Catalão","Goiás");
+        Endereco e2 = new Endereco(75704390,200, "Condomínio", "Rua 1","Bairro 2","Brasília","Distrito Federal");
+        Telefone t1 = new Telefone(64,981647176);
+        Telefone t2 = new Telefone(61,978879485);
+        Filial Roca = new Filial("TudodaRoça",t2,e2,"258741369", "Frutaria");
+
+        Roca.setProdutodeEstoques(Pepino);
+        Roca.setProdutodeEstoques(Tomate);
+
+        Roca.getProdutodeEstoques();
+
+        t1.getDDD();
+
+    }
+}

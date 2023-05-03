@@ -1,0 +1,55 @@
+package modelo;
+
+public class Main {
+	static Bebida b1;
+	static NaoPerecivel np1;
+	static Perecivel p2;
+	static Perecivel p1;
+	static Endereco e1;
+	static Telefone t1;
+	static Telefone t2;
+	static Filial f1;
+	static DataValidade d1;
+	static DataValidade d2;
+	
+    public static void main(String[] args) {
+        e1 = new Endereco(75704380, "Quadra","Bairro 1","Catalão","Goiás");
+        t1 = new Telefone(64,981647176);
+        t2 = new Telefone();
+        Filial Roca = new Filial("TudodaRoça",t1,e1,"258741369", "Frutaria");
+        np1 = new NaoPerecivel("Enlatado de Feijão",35,14.5f,Roca,d2,"Enlatados");
+        d1 = new DataValidade(13,12,2004);
+        d2 = new DataValidade(9,8,2003);
+        p2 = new Perecivel("Tomate",80,4.5f,Roca,d1,"Fruta");
+        
+        System.out.println(np1.getCategoria());
+        
+        t1.setDDD(61);
+        t1.setNumero(40028922);
+        
+        t2.setDDD(t1.getDDD());
+        t2.setNumero(58963215);
+
+        
+        System.out.println(t2.toString());
+        System.out.println(t1.getNumero());
+        
+
+        
+        System.out.println(np1.toString());
+        System.out.println(t1.toString());
+        
+        Roca.adicionarProduto(np1);
+        Roca.adicionarProduto(p2);
+        
+        System.out.println(Roca.getProdutodeEstoques());
+        System.out.println(d1.toString());
+        
+        Roca.removerProduto(1);
+        System.out.println(Roca.getProdutodeEstoques());
+        
+        
+        
+
+    }
+}

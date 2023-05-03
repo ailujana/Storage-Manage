@@ -1,0 +1,6 @@
+package modelo;
+
+public class Perecivel extends Produto {
+	String Data
+
+}

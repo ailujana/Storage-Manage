@@ -1,0 +1,78 @@
+package modelo;
+
+import java.util.Date;
+
+public class Perecivel extends Produto {
+	Date DatadeValidade = new Date();
+	String tipo; 
+	
+	public Perecivel(String nome, long quantidade, long preco, Filial filial, Date DatadeValidade, String tipo) {
+
+	    this.nome = nome;
+	    Quantidade = quantidade;
+	    Preco = preco;
+	    this.filial = filial;
+	    this.DatadeValidade = DatadeValidade;
+	    this.tipo = tipo;
+	}
+	
+	
+	public Date getDatadeValidade() {
+		return DatadeValidade;
+	}
+
+	public void setDatadeValidade(Date datadeValidade) {
+		DatadeValidade = datadeValidade;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+	public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public long getQuantidade(){
+        return Quantidade;
+    }
+
+    public void setQuantidade(long quantidade){
+        Quantidade = quantidade;
+    }
+
+    public long getPreco(){
+        return Preco;
+    }
+
+    public void setPreco(long preco){
+        Preco = preco;
+    }
+
+    public Filial getFilial(){
+        return filial;
+    }
+
+    public void setFilial(Filial filial){
+        this.filial =  filial;
+    }
+
+
+
+
+	@Override
+	public String toString() {
+		return "Perecivel [DatadeValidade=" + DatadeValidade + ", tipo=" + tipo + ", nome=" + nome + ", Quantidade="
+				+ Quantidade + ", Preco=" + Preco + ", filial=" + filial + "]";
+	}
+
+	
+
+}
+

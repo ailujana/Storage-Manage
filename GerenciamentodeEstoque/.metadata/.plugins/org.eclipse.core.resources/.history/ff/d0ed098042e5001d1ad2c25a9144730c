@@ -1,0 +1,83 @@
+package modelo;
+
+public class Endereco {
+    private int cep;
+    private int numCasa;
+    private String logradouro;
+    private String rua;
+    private String bairro;
+    private String cidade;
+    private String estado;
+
+    public Endereco( int c, int nCasa, String Logradouro, String Rua, String Bairro, String Cidade, String Estado) {
+        cep = c;
+        numCasa = nCasa;
+        this.logradouro = Logradouro;
+        this.rua = Rua;
+        this.bairro = Bairro;
+        this.cidade = Cidade;
+        this.estado = Estado;
+    }
+
+    
+	public String toString() {
+		return "Endereco [cep=" + cep + ", numCasa=" + numCasa + ", logradouro=" + logradouro + ", rua=" + rua
+				+ ", bairro=" + bairro + ", cidade=" + cidade + ", estado=" + estado + "]";
+	}
+
+
+	public String getLog() {
+        return logradouro;
+    }
+
+    public void setLog(String Logradouro) {
+        this.logradouro = Logradouro;
+    }
+    public int getCep(){
+        return cep;
+    }
+
+    public void setCep(int numCEP){
+        this.cep = numCEP;
+    }
+
+    public String getBairro(){
+        return bairro;
+    }
+
+    public void setBairro(String Bairro){
+        this.bairro = Bairro;
+    }
+
+    public String getEstado(){
+        return estado;
+    }
+
+    public void setEstado(String Estado){
+        this.estado = Estado;
+    }
+
+    public String getRua() {
+        return rua;
+    }
+
+    public void setRua(String Rua) {
+        this.rua = Rua;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String Cidade) {
+        this.cidade = Cidade;
+    }
+
+    public int getNumCasa() {
+        return numCasa;
+    }
+
+    public void setNumCasa(int numC) {
+        this.numCasa = numC;
+    }
+}

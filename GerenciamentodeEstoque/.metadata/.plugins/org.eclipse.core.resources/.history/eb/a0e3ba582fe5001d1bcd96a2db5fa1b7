@@ -1,0 +1,41 @@
+package modelo;
+
+public class Telefone {
+    private int ddd;
+    private int numero;
+
+    public Telefone(int codigo, int num){
+        ddd = codigo;
+        numero = num;
+    }
+
+    public Telefone() {
+
+    }
+
+    public String toString() {
+        return "Telefone: (" + ddd + ") " + numero;
+    }
+
+    public int getDDD() {
+        return ddd;
+    }
+
+
+    public void setDDD(int dDD) {
+        ddd = dDD;
+    }
+
+
+    public int getNumero() {
+        return numero;
+    }
+
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+
+
+
+}

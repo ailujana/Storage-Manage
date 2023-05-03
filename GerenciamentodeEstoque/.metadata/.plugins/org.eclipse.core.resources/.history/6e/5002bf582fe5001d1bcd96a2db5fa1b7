@@ -1,0 +1,37 @@
+package modelo;
+
+public class Bebida extends Produto {
+	private String Marca;
+	private long VCal;
+	
+	
+	public Bebida(String nome, long quantidade, long preco, Filial filial, String Marca, long VCal) {
+	    this.nome = nome;
+	    Quantidade = quantidade;
+	    Preco = preco;
+	    this.filial = filial;
+	    this.Marca = Marca;
+	    this.VCal = VCal;
+	}
+	
+	public Bebida() {
+		super();
+	}
+	
+	public String getMarca() {
+		return Marca;
+	}
+
+	public void setMarca(String marca) {
+		Marca = marca;
+	}
+
+	public long getVCal() {
+		return VCal;
+	}
+
+	public void setVCal(long vCal) {
+		VCal = vCal;
+	}
+}
+

@@ -1,0 +1,48 @@
+package modelo;
+
+public abstract class Produto {
+    protected String nome;
+    protected long Quantidade;
+    protected float Preco;
+    protected Filial filial;
+
+
+    /*public void acrescentarQuantidade(long Quantidade){
+        this.Quantidade += Quantidade;
+
+    }
+    public void descontarQuantidade(long Quantidade){
+        this.Quantidade -= Quantidade;
+    }*/
+
+    public String getNome(){
+        return nome;
+    }
+
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+    public long getQuantidade(){
+        return Quantidade;
+    }
+
+    public void setQuantidade(long quantidade){
+        Quantidade = quantidade;
+    }
+
+    public float getPreco(){
+        return Preco;
+    }
+
+    public void setPreco(float preco){
+        Preco = preco;
+    }
+
+    public Filial getFilial(){
+        return filial;
+    }
+
+    public void setFilial(Filial filial){
+        this.filial =  filial;
+    }
+}
