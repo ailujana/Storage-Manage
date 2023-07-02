@@ -2,109 +2,130 @@ package modelo;
 
 import java.util.ArrayList;
 
-public class Filial{
-
-    protected String nome;
-    protected long NumTel;
-    protected String endereco;
-    protected String CNPJ;
-    protected ArrayList<Produto> ProdutodeEstoques = new ArrayList<Produto>();
-    protected String tipo;
-
+/**
+ * Classe Filial que armazena seus produtos
+ * @author Ana Julia Mendes, Caua Araujo
+ * @since 2023
+ * @version 1.0
+ * 
+ * */
 
 
-    public Filial(String nome, long NumTel, String endereco, String CNPJ, String tipo){
-        this.nome = nome;
-        this.NumTel = NumTel;
-        this.endereco = endereco;
-        this.CNPJ = CNPJ;
-        this.tipo = tipo;
-    }
+public class Filial {
 
+	private String nome;
+	private int numTel;
+	private String endereco;
+	private String cnpj;
+	private ArrayList<Produto> produtodeEstoque = new ArrayList<Produto>();
+	private String tipo;
+	
+	/**
+	 * Parametros do Construtor da Classe Filial
+	 * @param nome
+	 * @param numTel
+	 * @param endereco
+	 * @param cnpj
+	 * @param tipo
+	 * */
 
+	public Filial(String nome, int numTel, String endereco, String cnpj, String tipo) {
+		this.nome = nome;
+		this.numTel = numTel;
+		this.endereco = endereco;
+		this.cnpj = cnpj;
+		this.tipo = tipo;
+	}
+
+	public Filial() {
+	}
 
 	public String getNome() {
 		return nome;
 	}
 
-
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
 
-
-
-	public long getNumTel() {
-		return NumTel;
+	public int getNumTel() {
+		return numTel;
 	}
 
-
-
-	public void setNumTel(long numTel) {
-		NumTel = numTel;
+	public void setNumTel(int numTel) {
+		this.numTel = numTel;
 	}
-
-
 
 	public String getEndereco() {
 		return endereco;
 	}
 
-
-
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
 
-
-
 	public String getCNPJ() {
-		return CNPJ;
+		return cnpj;
 	}
 
-
-
-	public void setCNPJ(String cNPJ) {
-		CNPJ = cNPJ;
+	public void setCNPJ(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
-
-
-	public ArrayList<Produto> getProdutodeEstoques() {
-		return ProdutodeEstoques;
+	public ArrayList<Produto> getProdutodeEstoque() {
+		return produtodeEstoque;
 	}
 
-
-
-	public void setProdutodeEstoques(ArrayList<Produto> produtodeEstoques) {
-		ProdutodeEstoques = produtodeEstoques;
+	public void setProdutodeEstoque(Produto ProdutodeEstoque) {
+		produtodeEstoque.add(ProdutodeEstoque);
 	}
-
-
 
 	public String getTipo() {
 		return tipo;
 	}
 
-
-
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
-
-
 	@Override
 	public String toString() {
-		return "\nNome da Filial= " + nome + "\nNumero do Telefone= " + NumTel + "\nEndereco= " + endereco + "\nCNPJ=" + CNPJ
-				+ "\nProdutos de Estoque= " + ProdutodeEstoques + "\nTipo= " + tipo;
+		return "\nNome da Filial= " + nome + "\nNumero do Telefone= " + numTel + "\nEndereco= " + endereco + "\nCNPJ="
+				+ cnpj
+				+ "\nProdutos de Estoque= " + produtodeEstoque + "\nTipo= " + tipo;
 	}
-    
-    
-    
-    
+	
+	/**
+	 * Metodo criado para armazenar os nomes dos Produtos cadastrados 
+	 * nas Filiais em um vetor de String.
+	 * @return String[]
+	 * */
 
-    
+	public String[] getNomesProdutos() {
+		int tamanho = produtodeEstoque.size();
+		String[] nomes = new String[tamanho];
 
+		for (int i = 0; i < tamanho; i++) {
+			Produto produto = produtodeEstoque.get(i);
+			nomes[i] = produto.getNome();
+		}
+
+		return nomes;
+	}
+
+	
+	/**
+	 *  Esse codigo compara as filiais com base em seus nomes. 
+	 *  Se os nomes forem iguais, as filiais são consideradas iguais
+	 *   e o método retorna true, caso contrario, retorna false.
+	 *   @return boolean
+	 *   */
+	
+	@Override
+	public boolean equals(Object filial) {
+		if (this.nome == ((Filial) filial).getNome()) {
+			return true;
+		}
+		return false;
+	}
 }

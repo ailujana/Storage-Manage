@@ -1,37 +1,38 @@
 package modelo;
 
 /**
- * Classe Bebida representa uma Bebida e herda da Classe Produto.
+ * Classe Alimento representa um Alimento e herda da Classe Produto.
  * @author Ana Julia Mendes, Caua Araujo
  * @since 2023
  * @version 1.0
  * */
 
-public class Bebida extends Produto {
-	private String marca;
-	private int vCal;
 
-	/** 
-	 * Parametros do Construtor da CBebida
+public class Alimento extends Produto {
+	private String tipo;
+	private String categoria;
+
+	/**
+	 * Parametros do Construtor da Classe Alimento
 	 * @param nome
 	 * @param quantidade
 	 * @param preco
-	 * @param marca
-	 * @param vCal
+	 * @param tipo
+	 * @param categoria
 	 * @param data
 	 * */
 	
-	public Bebida(String nome, int quantidade, float preco, String marca, int vCal, String data) {
+	public Alimento(String nome, int quantidade, float preco, String tipo, String categoria, String data) {
 		super();
 		this.nome = nome;
 		this.quantidade = quantidade;
 		this.preco = preco;
-		this.marca = marca;
-		this.vCal = vCal;
+		this.tipo = tipo;
+		this.categoria = categoria;
 		this.data = data;
 	}
-
-	public Bebida() {
+	
+	public Alimento() {
 
 	}
 
@@ -59,20 +60,20 @@ public class Bebida extends Produto {
 		this.preco = preco;
 	}
 
-	public String getMarca() {
-		return marca;
+	public String getTipo() {
+		return tipo;
 	}
 
-	public void setMarca(String marca) {
-		this.marca = marca;
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
 	}
 
-	public int getVCal() {
-		return vCal;
+	public String getCategoria() {
+		return categoria;
 	}
 
-	public void setVCal(int vCal) {
-		this.vCal = vCal;
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 
 	public String getData() {
@@ -85,9 +86,9 @@ public class Bebida extends Produto {
 
 	@Override
 	public String toString() {
-		return "\nMarca da Bebida= " + marca + "\nValor Calorico= " + vCal + "\nNome= " + nome + "\nQuantidade= "
-				+ quantidade
-				+ "\nPreco= " + preco + "\nData= " + data;
+		return "\nCategoria= " + categoria + "\nTipo= " + tipo + "\nNome= " + nome + "\nQuantidade= " + quantidade
+				+ "\nPreco= " + preco
+				+ data;
 	}
 
 }

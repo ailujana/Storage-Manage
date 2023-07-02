@@ -1,50 +1,48 @@
 package modelo;
 
+/**
+ * Classe Abstrata que representa um Produto e possui nome, quantidade, preco e data.
+ * @author Ana Julia Mendes, Caua Araujo
+ * @since 2023
+ * @version 1.0
+ * */
+
+
 public abstract class Produto {
     protected String nome;
-    protected long Quantidade;
-    protected float Preco;
-    protected Filial filial;
-    protected DataValidade data;
+    protected int quantidade;
+    protected float preco;
+    protected String data;
 
-
-    public String getNome(){
+    public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome){
+    public void setNome(String nome) {
         this.nome = nome;
     }
-    public long getQuantidade(){
-        return Quantidade;
+
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setQuantidade(long quantidade){
-        Quantidade = quantidade;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public float getPreco(){
-        return Preco;
+    public float getPreco() {
+        return preco;
     }
 
-    public void setPreco(float preco){
-        Preco = preco;
+    public void setPreco(float preco) {
+        this.preco = preco;
     }
 
-    public Filial getFilial(){
-        return filial;
+    public String getData() {
+        return data;
     }
 
-    public void setFilial(Filial filial){
-        this.filial =  filial;
+    public void setData(String data) {
+        this.data = data;
     }
-
-	
-	public DataValidade getData() {
-		return data;
-	}
-
-	public void setData(DataValidade data) {
-		this.data = data;
-	}
 }
