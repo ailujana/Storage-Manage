@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 /**
  * Classe Filial que armazena seus produtos
+ * 
  * @author Ana Julia Mendes, Caua Araujo
  * @since 2023
  * @version 1.0
  * 
- * */
-
+ */
 
 public class Filial {
 
@@ -19,15 +19,16 @@ public class Filial {
 	private String cnpj;
 	private ArrayList<Produto> produtodeEstoque = new ArrayList<Produto>();
 	private String tipo;
-	
+
 	/**
 	 * Parametros do Construtor da Classe Filial
+	 * 
 	 * @param nome
 	 * @param numTel
 	 * @param endereco
 	 * @param cnpj
 	 * @param tipo
-	 * */
+	 */
 
 	public Filial(String nome, int numTel, String endereco, String cnpj, String tipo) {
 		this.nome = nome;
@@ -80,6 +81,10 @@ public class Filial {
 		produtodeEstoque.add(ProdutodeEstoque);
 	}
 
+	public void setProdutodeEstoque(ArrayList<Produto> produtodeEstoque) {
+		this.produtodeEstoque = produtodeEstoque;
+	}
+
 	public String getTipo() {
 		return tipo;
 	}
@@ -94,12 +99,13 @@ public class Filial {
 				+ cnpj
 				+ "\nProdutos de Estoque= " + produtodeEstoque + "\nTipo= " + tipo;
 	}
-	
+
 	/**
-	 * Metodo criado para armazenar os nomes dos Produtos cadastrados 
+	 * Metodo criado para armazenar os nomes dos Produtos cadastrados
 	 * nas Filiais em um vetor de String.
+	 * 
 	 * @return String[]
-	 * */
+	 */
 
 	public String[] getNomesProdutos() {
 		int tamanho = produtodeEstoque.size();
@@ -113,14 +119,14 @@ public class Filial {
 		return nomes;
 	}
 
-	
 	/**
-	 *  Esse codigo compara as filiais com base em seus nomes. 
-	 *  Se os nomes forem iguais, as filiais são consideradas iguais
-	 *   e o método retorna true, caso contrario, retorna false.
-	 *   @return boolean
-	 *   */
-	
+	 * Esse codigo compara as filiais com base em seus nomes.
+	 * Se os nomes forem iguais, as filiais são consideradas iguais
+	 * e o método retorna true, caso contrario, retorna false.
+	 * 
+	 * @return boolean
+	 */
+
 	@Override
 	public boolean equals(Object filial) {
 		if (this.nome == ((Filial) filial).getNome()) {
